@@ -1,0 +1,49 @@
+
+body {
+  margin:0;
+  padding:0;
+}
+
+
+/**
+默认样式
+
+ */
+ #app {
+  height: 100vh;
+}
+
+.handle-wrap {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  &.more {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ant-form-inline {
+    .ant-form-item {
+      display: inline-block;
+      margin-right: 10px !important;
+      input{
+        width: 200px;
+      }
+      select{
+        width: 200px;
+      }
+    }
+  }
+}
+
+.t-l {
+  text-align: left;
+}
+
+.t-r {
+  text-align: right;
+}
+
+@import "reset";
+@import "base";
+@import "icnfont";
