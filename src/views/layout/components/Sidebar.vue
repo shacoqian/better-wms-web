@@ -9,9 +9,22 @@
       :defaultOpenKeys="defaultOpenKeys"
       v-model="currentSelectedKeys"
     >
-      <a-sub-menu key="baseCenter">
-        <span slot="title"><i class="iconfont icon-jidi"></i><span v-if="!sidebarOpened">基地中心管理</span></span>
-        <a-menu-item key="/baseCenter/list">基地中心</a-menu-item>
+    
+      <a-menu-item key="/store/list">
+        <i class="iconfont icon-jidi"></i>
+        <span v-if="!sidebarOpened">公司管理</span>
+      </a-menu-item>
+      <a-menu-item key="/store/list">
+        <i class="iconfont icon-jidi"></i>
+        <span v-if="!sidebarOpened">公司信息</span>
+      </a-menu-item>
+      <a-sub-menu key="baseCenter" >
+        <span slot="title"><i class="iconfont icon-jidi"></i><span v-if="!sidebarOpened">人员管理</span></span>
+        <a-menu-item key="/baseCenter/list">应用管理</a-menu-item>
+        <a-menu-item key="/baseCenter/list">组织机构</a-menu-item>
+        <a-menu-item key="/baseCenter/list">员工管理</a-menu-item>
+        <a-menu-item key="/baseCenter/list">部门管理</a-menu-item>
+        <a-menu-item key="/baseCenter/list">角色管理</a-menu-item>
       </a-sub-menu>
       <a-menu-item key="/store/list">
         <i class="iconfont icon-cangku"></i>
@@ -25,36 +38,15 @@
         <i class="iconfont icon-kehu"></i>
         <span v-if="!sidebarOpened">客户管理</span>
       </a-menu-item>
-      <a-sub-menu key="internalBilling">
-        <span slot="title"><i class="iconfont icon-jifeiguanlixitong"></i><span v-if="!sidebarOpened">内部计费</span></span>
-        <a-menu-item key="/internalBilling/warehousing">仓储计费</a-menu-item>
-        <a-menu-item key="/internalBilling/logistics/list">物流计费</a-menu-item>
-      </a-sub-menu>
-      <a-sub-menu key="finance">
-        <span slot="title"><i class="iconfont icon-caiwu"></i><span v-if="!sidebarOpened">财务管理</span></span>
-        <a-sub-menu key="clientCost" title="客户费用">
-          <a-menu-item key="/finance/clientCost/order">订单费用</a-menu-item>
-          <a-menu-item key="/finance/clientCost/delayed">滞纳费用</a-menu-item>
-          <a-menu-item key="/finance/clientCost/discharge">卸货费用</a-menu-item>
-        </a-sub-menu>
-        <a-sub-menu key="clientBill" title="客户账单">
-          <a-menu-item key="/finance/clientBill/list">账单</a-menu-item>
-        </a-sub-menu>
-        <a-sub-menu key="receivable" title="执行应收">
-          <a-menu-item key="/finance/receivable/order">订单费用</a-menu-item>
-          <a-menu-item key="/finance/receivable/delayed">滞纳费用</a-menu-item>
-          <a-menu-item key="/finance/receivable/discharge">卸货费用</a-menu-item>
-        </a-sub-menu>
-        <a-sub-menu key="cope" title="执行应付">
-          <a-menu-item key="/finance/cope/order">订单费用</a-menu-item>
-          <a-menu-item key="/finance/cope/delayed">滞纳费用</a-menu-item>
-          <a-menu-item key="/finance/cope/discharge">卸货费用</a-menu-item>
-        </a-sub-menu>
-      </a-sub-menu>
-      <a-sub-menu key="account">
-        <span slot="title"><i class="iconfont icon-icon-test" style="font-size: 15px;"></i><span v-if="!sidebarOpened">账户管理</span></span>
-        <a-menu-item key="/account">账户</a-menu-item>
-      </a-sub-menu>
+      <a-menu-item key="/client/list">
+        <i class="iconfont icon-kehu"></i>
+        <span v-if="!sidebarOpened">供应商管理</span>
+      </a-menu-item>
+      <a-menu-item key="/client/list">
+        <i class="iconfont icon-kehu"></i>
+        <span v-if="!sidebarOpened">订单管理</span>
+      </a-menu-item>
+      
     </a-menu>
   </a-layout-sider>
 </template>

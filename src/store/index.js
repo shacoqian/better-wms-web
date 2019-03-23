@@ -4,11 +4,13 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 import app from './modules/app'
 import data from './modules/data'
+import user from './modules/user'
 
 let $store = new Vuex.Store({
   modules:{
     app,
-    data
+    data,
+    user
   },
   state: {
 

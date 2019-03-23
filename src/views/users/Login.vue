@@ -37,7 +37,8 @@
 </template>
 
 <script>
-import { login } from '@/api/user'
+import { mapActions } from 'vuex'
+// import { debug } from 'util'
 export default {
   data () {
     return {
@@ -46,17 +47,21 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['LoginByEmail']),
     handleSubmit (e) {
       e.preventDefault()
-      // this.loading = true
       this.form.validateFields((err, values) => {
-        if (err)  {
-          // this.loading = false
-          return false
+        this.loading = true
+        if (! err)  {
+          this.LoginByEmail(values).then(() => {
+            this.loading = false
+            this.$router.push({path: this.redirect || '/'})
+          }).catch(() => {
+            this.loading = false
+          })
         } else {
-          login(values).then()
+          return false
         }
-        
       })
     }
   }
