@@ -36,7 +36,7 @@ request.interceptors.response.use(function (response) {
   const code = response.data.code
   const data = response.data || {}
   if (code === -999) {
-    window.location.href = `/user/login`
+    window.location.href = `/users/login`
     return Promise.resolve(data)
   } else if (code === 1) {
     return Promise.resolve(data)

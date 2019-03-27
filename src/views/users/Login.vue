@@ -51,8 +51,8 @@ export default {
     handleSubmit (e) {
       e.preventDefault()
       this.form.validateFields((err, values) => {
-        this.loading = true
         if (! err)  {
+          this.loading = true
           this.LoginByEmail(values).then(() => {
             this.loading = false
             this.$router.push({path: this.redirect || '/'})

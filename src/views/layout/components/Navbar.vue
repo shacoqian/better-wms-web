@@ -5,7 +5,7 @@
     <div class="user-info">
       <a-dropdown>
         <a class="ant-dropdown-link" href="#">
-        后花园 <a-icon type="down"/>
+        用户 <a-icon type="down"/>
         </a>
         <a-menu slot="overlay">
           <a-menu-item @click="edit">
@@ -35,10 +35,10 @@
   methods: {
     ...mapActions(['toggleSideBar']),
     logout () {
-      this.$router.push('/user/login')
+      this.$router.push('/users/login')
     },
     edit () {
-      this.$router.push('/user/login')
+      this.$router.push('/users/login')
     }
   }
 }

@@ -7,8 +7,8 @@ import request from '@/utils/request'
  */
 export async function login (params) {
   return request({
-    url:'/login',
-    method: 'post',
-    data: params
+    url:'/companys',
+    method: 'get',
+    params
   })
 }

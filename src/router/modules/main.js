@@ -1,6 +1,7 @@
 import Layout from '@/views/layout/Layout.vue'
 
 import users from './users'
+import company from './company'
 // import account from './account'
 // import baseCenter from './baseCenter'
 // import client from './client'
@@ -17,6 +18,7 @@ export default [
     component: Layout,
     meta: { title: '首页' },
     children: [
+      company
       // baseCenter,
       // store,
       // logistics,
